@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register</title>
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="/styling/style.css" />
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="/ctrl/film_js.js"></script>
+  <script src="/ctrl/openingWeek.js"></script>
+  <script src="/ctrl/nav_controller.js"></script>
+  <script src="/ctrl/append.js"></script>
+  <script src="/ctrl/sign-in.js"></script>
+  <script src="/ctrl/footer.js"></script>
+  
+</head>
+
+<body>
+  <div id="navbar"></div>
+  <div class="sign-in">
+    <div class="container-fluid mobile-padding pt-5">
+      <div class="row min-vh-100  d-flex justify-content-center align-items-center">
+        <div class="sign-in-container col-lg-4  col-12 col-sm-8 col-md-8  bg-black-low rounded-2">
+          <form id="sign-in-form" action="" class="m-5">
+            <legend>
+              <h2 class="pb-1"><b>Sign In</b></h2>
+            </legend>
+            <div class="form-group blur">
+              <input id="email-sign-in" class="form-control bg-transparent paddingBlockInput text-white"
+                placeholder="Email or mobile number" type="email" />
+            </div>
+            <span id="error-msg" class="d-none">Email should be inserted</span>  
+            <br><br>
+            <div class="form-group blur">
+              <input id="pw-sign-in" class="form-control bg-transparent paddingBlockInput text-white" placeholder="Password"
+                type="password" />
+            </div>
+            <span id="error-msg-pw" class="d-none">Your password must contain between 4 and 60 characters.</span>  
+            <p id="frgt-pw" class="text-end pt-3 ">Forgot Password?</p>
+            <br><br><br>
+            <button class="sign-in-btn w-100 p-2 rounded-2" type="submit">Sign In</button><BR></BR>
+            <p class="w-100 d-flex justify-content-center">OR</p>
+            <hr class="divider">
+            <button class="alternate-signIn btn btn-light w-100 rounded-2">
+              <i class="bi bi-google btn-light me-2"></i>
+              Continue with Google
+            </button>
+            <button class="alternate-signIn btn btn-light w-100 rounded-2">
+              <i class="bi bi-facebook btn-light me-2"></i>
+              Continue with Facebook
+            </button>
+            <button class="alternate-signIn btn btn-light w-100 rounded-2">
+              <i class="bi bi-apple btn-light me-2"></i>
+              Continue with Apple
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer"></div>
+  <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

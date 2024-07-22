@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Movie Details</title>
+  <link rel="stylesheet" href="/styling/style.css" />
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="/ctrl/openFilmPage-controller.js"></script>
+  <script src="/ctrl/nav_controller.js"></script>
+  <script src="/ctrl/openingWeek.js"></script>
+  <script src="/ctrl/genre_controller.js"></script>
+  <script src="/ctrl/genre.js"></script>
+  <script src="/ctrl/footer.js"></script>
+  <script src="/ctrl/trailer-modal.js"></script>
+</head>
+
+<body>
+  <div id="navbar"></div>
+  <div id="trailer-modal"></div>
+  <div id="backdrop" class="detail-film marginTop" style="height: 70vh; max-height: 800px">
+    <div class="container-lg col-lg-9 col-md-12 h-100">
+      <div class="row h-100 d-flex justify-content-center align-items-center">
+        <div class="col-12 d-flex flex-wrap justify-content-center p-0 col-12">
+          <div class="col-12 col-lg-3 col-md-5 ps-0 ps-sm-5 ps-md-0 d-flex justify-content-md-center">
+            <div class="col-lg-12 col-md-9 col-4 d-flex justify-content-center h-100">
+              <img id="movie-poster" class="rounded-4 img-fluid" alt="Movie Poster" />
+            </div>
+          </div>
+          <div class="details-log col-12 col-lg-9 col-md-7 ps-md-3 ps-lg-5 h-100">
+            <div id="details-log" class="text-white d-flex flex-wrap flex-column h-100">
+              <h1 id="movie-title"></h1>
+              <div class="d-flex">
+                <p id="movie-release-date" class="me-3"></p>
+                <p id="movie-runtime"></p>
+              </div>
+              <div class="text-white mt-auto">
+                <h2 class="overview">Overview</h2>
+                <p id="movie-overview"></p>
+                <h3 id="movie-genres" class="d-flex gap-2"></h3>
+              </div>
+     
+              <div id="action-buttons" class="d-flex gap-3 padding-block">
+                <button id="list" class="btn btn-icon" title="add to playlist">
+                  <i class="fa fa-list"></i>
+                </button>
+                <button id="fav" class="btn btn-icon" title="add to favorite">
+                  <i class="fa fa-heart"></i>
+                </button>
+                <button id="bookmark" class="btn btn-icon" title="bookmark">
+                  <i class="fa fa-bookmark"></i>
+                </button>
+                <button title="play it now" id="trailer-end-point" class="btn btn-play" data-bs-target="#trailerModal" data-bs-toggle="modal">
+                  <i class="fa fa-play pe-2"></i>
+                  Play Trailer
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="details-log-placeholder" class="mobile-padding padding-block"></div>
+  <div id="footer"></div>
+  <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

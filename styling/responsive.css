@@ -1,0 +1,231 @@
+@media (min-width: 768px) {
+  #xs {
+    display: none !important;
+    background-color: aqua;
+    width: 233px;
+  }
+}
+
+@media (min-width: 767px) {
+  .mobilePost {
+    position: absolute !important;
+    right: 130px;
+  }
+  .left-0{
+    left: -20px;
+  }
+ 
+}
+
+
+
+@media (max-width: 576px) {
+
+  .alternate-signIn{
+    font-size: 1.1rem;
+  }
+  
+  .mobilePost {
+    padding-top: 0.4rem;
+    position: absolute;
+    z-index: -10;
+    top: -10px;
+    right: 0;
+    width: 100%;
+  }
+
+  .nav-link{
+    padding-bottom: 2rem !important;
+  }
+
+  #searchForm {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    background-color: var(--prime-color);
+  }
+
+  .icon-small {
+    font-size: 1.6rem;
+  }
+  
+
+}
+@media (max-width: 767.5px) and (min-width: 576px) {
+  .mobilePost {
+    padding-top: 4.5rem;
+    position: absolute;
+    z-index: -1;
+    top: -10px;
+    right: 0;
+    width: 100%;
+  }
+
+  #join{
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  #searchForm {
+    background-color: var(--prime-color);
+    width: 100%;
+  }
+  .detail-film{
+    height: 50vh !important;
+  }
+}
+
+/* hp */
+@media (min-width: 320px) and (max-width: 576px) {
+  :root {
+    font-size: 12px !important;
+  }
+  #landing-page .container h1{
+    font-size: 2rem !important;
+  }
+  #landing-page .container p{
+    padding-top: .5rem;
+    font-size: 1.2rem !important;
+  }
+  h1 {
+    font-size: 1.5rem !important;
+  }
+  p {
+    font-size: 1rem;
+  }
+  h4 {
+    font-size: 2rem;
+  }
+  .detail-film{
+    height: 25rem !important;
+  }
+  
+  .img-fluid{
+   
+  }
+  .poster {
+    width: 7rem;
+  }
+  .hero {
+    padding-top: 3.5rem;
+    height: 60vh !important;
+  }
+  .mobile-padding {
+    padding-inline: 5% !important;
+  }
+  .hero .container {
+    width: 100vw !important;
+    padding-inline: 10% !important;
+  }
+  .navbar {
+    backdrop-filter: blur(10px) saturate(180%);
+    -webkit-backdrop-filter: blur(10px) saturate(180%);
+    background-color: rgba(0, 0, 0, 0.502) !important;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
+  }
+
+  .navbar-brand img {
+    width: 9rem !important;
+  }
+  .navbar-toggler-icon {
+    width: 1.5em;
+    height: 1.5em;
+  }
+  .join {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .navbar-nav {
+    margin-bottom: 7rem !important;
+  }
+}
+
+/* hp kecil */
+@media (max-width: 320px) {
+  :root {
+    font-size: 8px !important;
+  }
+
+  #landing-page .container h1{
+    font-size: 2rem !important;
+  }
+
+  .hero {
+    padding-top: 3.5rem;
+    height: 50vh !important;
+  }
+  .mobile-padding {
+    padding-inline: 10% !important;
+  }
+  .hero .container {
+    width: 100vw !important;
+    padding-inline: 10% !important;
+  }
+
+  .navbar-toggler-icon {
+    width: 1.5em;
+    height: 1.5em;
+  }
+  .join {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .navbar-nav {
+    margin-bottom: 7rem !important;
+  }
+}
+/* web */
+@media (min-width: 1200px) {
+  :root {
+    font-size: 13px !important;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+  .fill-available-space {
+    max-width: 80%;
+  }
+  .hero .container {
+    width: 72%;
+  }
+
+  .img-container {
+    transform: translateX(4rem);
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1200px) {
+  :root {
+    font-size: 13px !important;
+  }
+}
+
+@media (max-width: 600px) and (min-width: 576px) {
+  :root {
+    font-size: 13px !important;
+  }
+}
+
+/* tablet */
+@media (min-width: 600px) and (max-width: 991px) {
+  :root {
+    font-size: 13px !important;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  .hero {
+    padding-top: 7.5rem;
+  }
+  .mobile-padding {
+    padding-inline: 10% !important;
+  }
+}
+
+@media (max-width: 1200px) and (min-width: 990px){
+ .card h3{
+  font-size: small;
+ }
+}

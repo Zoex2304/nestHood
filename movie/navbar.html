@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/styling/style.css">
+  <link rel="stylesheet" href="/bootstrap/bootstrap-icons/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+  <nav class="navbar fixed-top navbar-dark navbar-expand-md">
+    <div class="container col-lg-9 col-md-12 col-12">
+      <a href="/index.html" class="navbar-brand">
+        <img id="logo" src="/assets/logs.png" alt="" width="80">
+      </a>
+      <div id="searchNav" class="collapse mobilePost">
+        <ul id="search" class="navbar-nav search-form ms-auto">
+          <form id="searchForm" class="nav-item d-flex search-post" action="/movie/result.html">
+            <input id="query" name="query" type="text" class="form-control me-2 blur" placeholder="Search"
+              aria-label="Search">
+            <button id="searchButton" class="btn btn-outline-light" type="submit">Search</button>
+          </form>
+        </ul>
+      </div>
+
+      <button id="xs" class="btn  ms-auto" data-bs-toggle="collapse" data-bs-target="#searchNav"
+        aria-controls="searchNav" aria-expanded="false" aria-label="Toggle search">
+        <i class="bi bi-search link-light"></i>
+      </button>
+
+      <button class="navbar-toggler link-light" data-bs-target="#navbarNav" data-bs-toggle="collapse" aria-label="navbar toggle"
+        aria-controls="navbarNav" aria-expanded="false">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="navbarNav" class="collapse navbar-collapse">
+        <ul class="navbar-nav gap-sm-3 pb-lg-0 pb-md-0">
+          <li class="nav-item">
+            <a href="/index.html" class="nav-link active link-light">Home</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a type="button" class="nav-link dropdown-toggle  p-0 p-lg-2 p-md-2 " data-bs-toggle="dropdown" aria-expanded="false">Film List</a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a href="/movie/now-playing.html" class="dropdown-item">Now Playing</a></li>
+              <li><a href="/movie/upcoming.html" class="dropdown-item">Upcoming Movies</a></li>
+              <li><a href="/movie/popular.html" class="dropdown-item">Popular Movies</a></li>
+              <li><a href="/movie/top-rated.html" class="dropdown-item">Top Rated</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a type="button" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Genre</a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <div class="d-flex">
+                <div class="container">
+                  <li><p id="tre" class="genreSec dropdown-item" data-genre-id="12">Adventure</p></li>
+                  <li><p class="genreSec dropdown-item" data-genre-id="14">Fantasy</p></li>
+                  <li><p class="genreSec dropdown-item" data-genre-id="16">Animation</p></li>
+                  <li><p class="genreSec dropdown-item" data-genre-id="18">Drama</p></li>
+                  <li><p class="genreSec dropdown-item" data-genre-id="27">Horror</p></li>
+                  <li><p class="genreSec dropdown-item" data-genre-id="28">Action</p></li>
+                  <li><p class="genreSec dropdown-item" data-genre-id="35">Comedy</p></li>
+                </div>
+                <div class="container">
+                  <li><p class="genreSec dropdown-item" data-genre-id="36">History</p></li>
+                  <li><p class="genreSec dropdown-item" data-genre-id="37">Western</p></li>
+                  <li><p class="genreSec dropdown-item" data-genre-id="53">Thriller</p></li>
+                  <li><p class="genreSec dropdown-item" data-genre-id="80">Crime</p></li>
+                  <li><p class="genreSec dropdown-item" data-genre-id="99">Documentary</p></li>
+                  <li><p class="genreSec dropdown-item" data-genre-id="878">Science Fiction</p></li>
+                  <li><p class="genreSec dropdown-item" data-genre-id="9648">Mystery</p></li>
+                </div>
+                <div class="container">
+                  <li><p class="genreSec dropdown-item" data-genre-id="10402">Music</p></li>
+                  <li><p class="genreSec dropdown-item" data-genre-id="10749">Romance</p></li>
+                  <li><p class="genreSec dropdown-item" data-genre-id="10751">Family</p></li>
+                  <li><p class="genreSec dropdown-item" data-genre-id="10752">War</p></li>
+                  <li><p class="genreSec dropdown-item" data-genre-id="10770">TV Movie</p></li>
+                </div>
+              </div>
+            </ul>
+          </li>
+        </ul>
+        <a id="join" href="/movie/register.html" class="join  ms-auto btn text-white" style="padding-inline: 2.3rem;">Sign In</a>
+      </div>
+    </div>
+  </nav>
+</body>
+
+</html>
+

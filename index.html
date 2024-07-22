@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>final project</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="styling/style.css" />
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="ctrl/openingWeek.js"></script>
+  <script src="ctrl/nav_controller.js"></script>
+  <script src="ctrl/genre.js"></script>
+  <script src="ctrl/signUp.js"></script>
+  <script src="ctrl/footer.js"></script>
+  <script src="ctrl/carousel.js"></script>
+  <style>
+    :root {
+      font-size: 16px;
+      --accsent-color: #e50914;
+      --hover-color: #5b0005;
+      --prime-color: #0a0a0a;
+    }
+  </style>
+</head>
+
+<body>
+  <!--navbar-->
+  <div id="navbar"></div>
+  <!--end navbar-->
+
+  <!--hero section-->
+  <section id="landing-page" class="hero min-vw-100" style="height: 100vh; max-height: 1200px;">
+    <div class="container col-9 mobile-padding h-100">
+      <div class="row h-100 d-flex justify-content-lg-between justify-content-md-center align-items-center">
+        <div class="col-sm-12">
+          <div class="row">
+            <div class="container d-flex justify-content-center flex-column align-items-center w-100">
+              <h1 class="text-center" style="font-size: 3em;">
+                <b>Unlimited movies, TV shows, and more</b>
+              </h1>
+              <p class="desc text-center">
+                Ready to watch? Enter your email to create or restart your membership.
+              </p>
+              <div class="container-lg col-lg-5">
+                <form action="" id="sign-up-form">
+                  <div class="row d-flex justify-content-center align-items-center gap-lg-0 gap-md-2 gap-5">
+                    <div class="col-12 col-lg-8 col-md-7 blur-black p-0">
+                      <input type="email" id="email-end-point" placeholder="Email Address"
+                        class="form-control bg-transparent paddingBlockInput text-white position-relative">
+                      <span id="error-msg" class="ps-md-4 left-0 d-none position-absolute">Please insert email
+                        first</span>
+                    </div>
+                    <div class="col-6 col-lg-4 col-md-4 col-sm">
+                      <div class="d-flex justify-content-center">
+                        <button id="getStarted" class="btn start-button fs-5 w-100" type="submit"
+                          style="background-color: var(--accsent-color); color: white;">Get Started</button>
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--end hero section-->
+
+  <section>
+    <div class="now-playing container">
+      <div class="row d-flex justify-content-center align-item-center ">
+        <div class="col-lg-10" style="height: fit-content;">
+          <div class="header col-lg-12 d-flex align-items-center padding-block">
+            <h4>Now Playing</h4>
+            <div class="ms-auto d-flex justify-content-end h-100 p-0 gap-4">
+              <button class="prv-1 carousel-button btn p-0"><i
+                  class="bi bi-arrow-left-circle text-white icon-large icon-small"></i></button>
+              <button class="nxt-1 carousel-button btn p-0"><i
+                  class="bi bi-arrow-right-circle text-white icon-large icon-small"></i></button>
+            </div>
+            <a href="/movie/now-playing.html" class="link-danger btn ms-1">See All</a>
+          </div>
+          <div class="col-lg-12 position-relative">
+            <div class="carousel-container" style="overflow: hidden; position: relative;">
+              <div id="nowPlayingMovies" class="d-flex" style="position: relative; transition: left 0.3s;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="upcoming container">
+      <div class="row d-flex justify-content-center align-item-center ">
+        <div class="col-lg-10" style="height: fit-content;">
+          <div class="header col-lg-12 d-flex align-items-center padding-block">
+            <h4>Opening This Week</h4>
+            <div class="ms-auto d-flex justify-content-end h-100 p-0 gap-4">
+              <button class="prv-2 carousel-button btn p-0"><i
+                  class="bi bi-arrow-left-circle text-white icon-large icon-small"></i></button>
+              <button class="nxt-2 carousel-button btn p-0"><i
+                  class="bi bi-arrow-right-circle text-white icon-large icon-small"></i></button>
+            </div>
+            <a href="/movie/upcoming.html" class="link-danger btn ms-1">See All</a>
+          </div>
+          <div class="col-lg-12 position-relative">
+            <div class="carousel-container" style="overflow: hidden; position: relative;">
+              <div id="opening-this-week" class="d-flex" style="position: relative; transition: left 0.3s;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="popular container">
+      <div class="row d-flex justify-content-center align-item-center ">
+        <div class="col-lg-10" style="height: fit-content;">
+          <div class="header col-lg-12 d-flex align-items-center padding-block">
+            <h4>Popular Movie</h4>
+            <div class="ms-auto d-flex justify-content-end h-100 p-0 gap-4">
+              <button class="prv-3 carousel-button btn p-0"><i
+                  class="bi bi-arrow-left-circle text-white icon-large icon-small"></i></button>
+              <button class="nxt-3 carousel-button btn p-0"><i
+                  class="bi bi-arrow-right-circle text-white icon-large icon-small"></i></button>
+            </div>
+            <a href="/movie/popular.html" class="link-danger btn ms-1">See All</a>
+          </div>
+          <div class="col-lg-12 position-relative">
+            <div class="carousel-container" style="overflow: hidden; position: relative;">
+              <div id="popular-movie" class="d-flex" style="position: relative; transition: left 0.3s;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="top-rated container">
+      <div class="row d-flex justify-content-center align-item-center ">
+        <div class="col-lg-10" style="height: fit-content;">
+          <div class="header col-lg-12 d-flex align-items-center padding-block">
+            <h4>Top Rated Movies</h4>
+            <div class="ms-auto d-flex justify-content-end h-100 p-0 gap-4">
+              <button class="prv-4 carousel-button btn p-0"><i
+                  class="bi bi-arrow-left-circle text-white icon-large icon-small"></i></button>
+              <button class="nxt-4 carousel-button btn p-0"><i
+                  class="bi bi-arrow-right-circle text-white icon-large icon-small"></i></button>
+            </div>
+            <a href="/movie/top-rated.html" class="link-danger btn ms-1">See All</a>
+          </div>
+          <div class="col-lg-12 position-relative">
+            <div class="carousel-container" style="overflow: hidden; position: relative;">
+              <div id="topRatedMovies" class="d-flex" style="position: relative; transition: left 0.3s;">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer"></div>
+  <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.3/jquery-ui.min.js"></script>
+  <script>
+    $(function () {
+      appendContentMovie("upcoming", "#opening-this-week", ".container-poster");
+      appendContentMovie("popular", "#popular-movie", "#popularMovie")
+      appendContentMovie("top_rated", "#topRatedMovies", "#topRated")
+      appendContentMovie("now_playing", "#nowPlayingMovies", "#nowPlaying")
+
+      initCarousel('#nowPlayingMovies', '.prv-1', '.nxt-1')
+      initCarousel('#opening-this-week', '.prv-2', '.nxt-2')
+      initCarousel('#popular-movie', '.prv-3', '.nxt-3')
+      initCarousel('#topRatedMovies', '.prv-4', '.nxt-4')
+    });
+
+    function initCarousel(div, prev, next) {
+        let currentIndex = 0;
+
+        function updateCarousel() {
+          const itemWidth = $(`${div} .scroll-item`).outerWidth(true);
+          const offset = -currentIndex * itemWidth;
+          $(`${div}`).css('left', offset);
+        }
+
+        $(`${next}`).click(function () {
+          const totalItems = $(`${div} .scroll-item`).length;
+          const itemsVisible = Math.floor($('.carousel-container').width() / $(`${div} .scroll-item`).outerWidth(true));
+          if (currentIndex < totalItems - itemsVisible) {
+            currentIndex++;
+            updateCarousel();
+          }
+        });
+
+        $(`${prev}`).click(function () {
+          if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel();
+          }
+        });
+
+        $(`${div}`).draggable({
+          axis: "x",
+          stop: function (event, ui) {
+            const itemWidth = $(`${div} .scroll-item`).outerWidth(true);
+            const offset = ui.position.left;
+            currentIndex = Math.round(-offset / itemWidth);
+            const totalItems = $(`${div} .scroll-item`).length;
+            const itemsVisible = Math.floor($('.carousel-container').width() / itemWidth);
+            if (currentIndex < 0) currentIndex = 0;
+            if (currentIndex > totalItems - itemsVisible) currentIndex = totalItems - itemsVisible;
+            updateCarousel();
+          }
+        });
+      }
+
+  </script>
+</body>
+
+</html>

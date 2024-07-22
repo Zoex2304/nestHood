@@ -1,0 +1,427 @@
+:root {
+  --accsent-color: #e50914;
+  --hover-color: #5b0005;
+  --prime-color: #0a0a0a;
+}
+
+.alternate-signIn {
+  margin-bottom: 8px;
+  background-color: #ffffff37;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  color: white;
+  border: none !important;
+  padding-block: 0.7rem;
+}
+
+.subtitle {
+  color: rgb(132, 132, 132);
+}
+
+.line-height {
+  line-height: 1rem;
+}
+
+.header {
+  position: relative;
+}
+
+.genre-link {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+}
+
+.sign-in-container {
+  max-width: 600px;
+}
+
+.sign-in-btn {
+  background-color: var(--accsent-color);
+  border: none;
+  font-size: 1.3rem;
+  color: white;
+  font-weight: 500;
+}
+
+.sign-in-btn:hover {
+  background-color: var(--hover-color);
+}
+
+section h4::after {
+  content: "";
+  inset: 0;
+  height: 3px;
+  position: absolute;
+  top: 90px;
+  background: linear-gradient(to right, var(--accsent-color), #0000006a);
+}
+
+.blur {
+  background-color: #ffffff37;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  color: white;
+  border: none !important;
+}
+.bg-black-low {
+  background-color: #0a0a0acc;
+}
+.blur-black {
+  background-color: #00000054;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  color: white;
+}
+
+#frgt-pw {
+  cursor: pointer;
+  font-size: small;
+  font-weight: 300;
+}
+#frgt-pw:hover {
+  color: rgba(255, 255, 255, 0.864);
+}
+
+.sign-in {
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+
+.genreSec {
+  cursor: pointer;
+}
+
+.sign-in::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  background-image: url("/assets/moviegrid.jpg");
+  background-size: cover;
+  background-position: center;
+  z-index: -2;
+  transform: translate(-50%, -50%) rotate(12deg);
+}
+.sign-in::after {
+  isolation: isolate;
+  z-index: -1;
+  background-color: #0a0a0a;
+  opacity: 0.6;
+  inset: 0;
+  position: absolute;
+  content: "";
+  background-size: cover;
+  background-position: center;
+}
+
+body {
+  background-color: #1c1c1c;
+  color: #ffffff;
+}
+
+.detail-film {
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  color: white;
+}
+
+#movie-trailer iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.top-billed-cast {
+  margin-top: 20px;
+  color: white;
+}
+
+.top-billed-cast h4 {
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: lightgray;
+  margin: 0;
+}
+
+.d-none {
+  display: none;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.btn-icon {
+  background-color: #1c1c1c;
+  border: 1px solid #555;
+  color: white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+}
+
+.btn-play:hover,
+.btn-icon:hover {
+  border-color: #555 !important;
+  color: rgb(0, 0, 0);
+  background-color: white;
+}
+
+.btn-play {
+  background-color: #1c1c1c;
+  border: 1px solid #555;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 0 15px;
+  font-size: 18px;
+  border-radius: 20px;
+}
+
+.btn-play i {
+  margin-right: 5px;
+}
+
+.blur-background {
+  filter: blur(8px);
+  transition: filter 0.3s;
+}
+
+.footer {
+  background-color: #000;
+  color: #fff;
+  padding: 20px 0;
+}
+.footer a {
+  color: #fff;
+  margin-right: 15px;
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+.footer .language-selector {
+  margin-top: 15px;
+}
+.footer .language-selector select {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
+.left-0 {
+  left: 0;
+}
+
+.border-none {
+  border: none;
+}
+
+#email-end-point::placeholder,
+#query::placeholder,
+.sign-in input::placeholder {
+  color: rgb(214, 213, 213);
+}
+
+.subtitle:hover {
+  color: #e50914;
+}
+
+.paddingBlockInput {
+  padding-block: 11px;
+}
+
+.hero {
+  isolation: isolate;
+  position: relative !important;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  left: 50% !important;
+  transform: translate(-50%);
+  background-image: url("/assets/moviegrid.jpg");
+  overflow: hidden;
+}
+.hero::after {
+  inset: 0;
+  content: "";
+  position: absolute !important;
+  position: relative;
+  background: linear-gradient(to bottom, rgba(221, 221, 221, 0), rgb(0, 0, 0));
+  z-index: -1;
+}
+.hero::before {
+  inset: 0;
+  content: "";
+  position: absolute !important;
+  top: 0;
+  position: relative;
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 0.415) 50%,
+    rgba(0, 0, 0, 0.743) 100%
+  );
+  z-index: -1;
+}
+
+.navbar-brand img {
+  width: 8.5rem !important;
+}
+.movie-card {
+  border: none;
+  color: inherit;
+  background-color: transparent;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--prime-color);
+  color: white;
+}
+
+.anime-container {
+  width: 20em !important;
+}
+
+/* button */
+.login-button:hover {
+  border: none !important;
+  background-color: darkred !important;
+}
+.start-button:hover {
+  background-color: rgb(255, 152, 152) !important;
+}
+/* button */
+
+.card-img-top {
+  aspect-ratio: 2/3;
+}
+
+.navbar {
+  backdrop-filter: blur(10px) saturate(180%);
+  -webkit-backdrop-filter: blur(10px) saturate(180%);
+  background-color: rgba(0, 0, 0, 0.502) !important;
+}
+.desc {
+  font-size: 1.3rem !important;
+}
+
+.img-fluid {
+  max-width: 300px;
+  height: auto !important;
+}
+
+.navbar .container {
+  position: relative !important;
+}
+
+.img-fluid {
+  width: 100% !important;
+  object-fit: cover !important;
+}
+
+.mobileSearch {
+  display: flex;
+  position: absolute;
+  right: 6rem;
+  top: 0.5rem;
+}
+
+.paddingTop {
+  padding-top: 6rem;
+}
+
+.marginTop {
+  margin-top: 4.5rem;
+}
+
+.card {
+  cursor: pointer;
+}
+
+.padding-block {
+  padding-block: 4rem;
+}
+
+.line {
+  position: relative;
+}
+.line::after {
+  content: "";
+  inset: 0;
+  top: 9rem;
+  position: absolute;
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    var(--accsent-color),
+    var(--prime-color)
+  );
+}
+
+.mobile-card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#backdrop {
+  background-repeat: no-repeat;
+  background-size: cover;
+  isolation: isolate;
+  position: relative;
+}
+#backdrop::after {
+  content: "";
+  position: absolute;
+  background-color: rgb(0, 0, 0);
+  inset: 0;
+  opacity: 0.7;
+  z-index: -1;
+}
+
+#join {
+  background-color: var(--accsent-color);
+}
+
+#join:hover {
+  background-color: var(--hover-color);
+}
+
+#nowPlayingMovies {
+  display: flex;
+}
+
+.scroll-item {
+  display: block;
+  margin-right: 1rem;
+}
+.carousel-container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.icon-large {
+  font-size: 2rem;
+}
