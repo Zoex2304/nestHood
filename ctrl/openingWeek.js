@@ -4,7 +4,7 @@ const homeBackdropId = "209112";
 function directDetailCardFilm(card) {
   $(`${card}`).on("click", function () {
     var movieID = $(this).parent().attr("id").split("-")[1];
-    window.location.href = `/movie/movie_detail.html?id=${movieID}`;
+    window.location.href = `/nestHood/movie/movie_detail.html?id=${movieID}`;
   });
 }
 
@@ -14,7 +14,7 @@ function goToGenrePage() {
     var genre_id = $(this).data("genre-id");
     var genre_name = $(this).text();
     var genre = ["genreId=" + genre_id, "genreName=" + genre_name];
-    window.location.href = "/movie/genre.html?" + genre.join("&");
+    window.location.href = "/nestHood/movie/genre.html?" + genre.join("&");
   });
 }
 
@@ -71,7 +71,9 @@ function appendContentMovie(segment, div1, div2) {
     function renderingMovie(movies) {
       movies = movies.slice(
         0,
-        window.location.pathname.endsWith("/index.html") ? 13 : movies.length
+        window.location.pathname.endsWith("/nestHood/index.html")
+          ? 13
+          : movies.length
       );
 
       let isMobileScreen = $(window).width() < 506;
@@ -121,7 +123,11 @@ function appendContentMovie(segment, div1, div2) {
                       </div>
                   </div>`;
 
-        var card = `<div id='movie-${data.id}' class=' ${(window.location.pathname.endsWith("/index.html")) ? "scroll-item"  : ""} col-lg-2 col-md-4 col-sm-4 col-4 mb-4' style='height: fit-content'>
+        var card = `<div id='movie-${data.id}' class=' ${
+          window.location.pathname.endsWith("/nestHood/index.html")
+            ? "scroll-item"
+            : ""
+        } col-lg-2 col-md-4 col-sm-4 col-4 mb-4' style='height: fit-content'>
                           <div class='movie-card card h-100'>
                               ${img_film}
                               <div class='card-body ps-0'>

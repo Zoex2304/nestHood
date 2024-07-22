@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $.get("/movie/navbar.html", function (data) {
+  $.get("/nestHood/movie/navbar.html", function (data) {
     $("#navbar").html(data);
 
     removeSearchToggle();
@@ -8,8 +8,7 @@ $(document).ready(function () {
       removeSearchToggle();
     });
 
-    goToGenrePage()
-
+    goToGenrePage();
   });
 
   function removeSearchToggle() {
@@ -41,8 +40,7 @@ $(document).ready(function () {
   $("#searchForm").submit(function (event) {
     event.preventDefault();
     var query = $("#query").val().trim();
-    window.location.href = "/movie/result.html?query=" + encodeURIComponent(query);
+    window.location.href =
+      "/nestHood/movie/result.html?query=" + encodeURIComponent(query);
   });
-
- 
 });

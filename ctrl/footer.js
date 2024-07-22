@@ -1,5 +1,5 @@
-$(function(){
-    $.get('/movie/footer.html',function(data){
-        $('#footer').html(data);
-    })
-})
+$(function () {
+  $.get("/nestHood/movie/footer.html", function (data) {
+    $("#footer").html(data);
+  });
+});

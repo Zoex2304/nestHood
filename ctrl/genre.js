@@ -22,7 +22,7 @@ function fetchAll(page, id) {
 }
 
 function appendGenreGroup(id) {
-  const totalPages = 1;
+  const totalPages = 12;
   defineHeader(id, function () {
     for (let page = 1; page <= totalPages; page++) {
       fetchAll(page, id);
