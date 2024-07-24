@@ -329,7 +329,8 @@ body {
   height: auto !important;
 }
 .billed-img-fluid {
-  max-width: 200px;
+  /* max-width: 100px; */
+  flex: 0 0 calc(100% / 3) !important;
   height: auto !important;
 }
 
@@ -360,6 +361,7 @@ body {
 .card {
   cursor: pointer;
 }
+
 
 .padding-block {
   padding-block: 4rem;
@@ -429,3 +431,6 @@ body {
 .icon-large {
   font-size: 2rem;
 }
+
+
+
