@@ -101,7 +101,7 @@ section h4::after {
   left: 50%;
   width: 150%;
   height: 150%;
-  background-image: url("/assets/moviegrid.jpg");
+  background-image: url("/nestHood/assets/moviegrid.jpg");
   background-size: cover;
   background-position: center;
   z-index: -2;
@@ -326,6 +326,10 @@ body {
 
 .img-fluid {
   max-width: 300px;
+  height: auto !important;
+}
+.billed-img-fluid {
+  max-width: 200px;
   height: auto !important;
 }
 
