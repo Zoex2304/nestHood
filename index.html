@@ -182,7 +182,7 @@
   <script src="/nestHood/ctrl/footer.js"></script>
   <script src="/nestHood/ctrl/carousel.js"></script>
   <script>
-    $(function () {
+    document.addEventListener('DOMContentLoaded', function() {
       appendContentMovie(
         "upcoming",
         "#opening-this-week",
@@ -191,59 +191,58 @@
       appendContentMovie("popular", "#popular-movie", "#popularMovie");
       appendContentMovie("top_rated", "#topRatedMovies", "#topRated");
       appendContentMovie("now_playing", "#nowPlayingMovies", "#nowPlaying");
+    console.log("Document loaded and ready");
 
-      initCarousel("#nowPlayingMovies", ".prv-1", ".nxt-1");
-      initCarousel("#opening-this-week", ".prv-2", ".nxt-2");
-      initCarousel("#popular-movie", ".prv-3", ".nxt-3");
-      initCarousel("#topRatedMovies", ".prv-4", ".nxt-4");
-    });
+    function initCarousel() {
+      console.log("Initializing carousel");
 
-    function initCarousel(div, prev, next) {
-      let currentIndex = 0;
-
-      function updateCarousel() {
-        const itemWidth = $(`${div} .scroll-item`).outerWidth(true);
-        const offset = -currentIndex * itemWidth;
-        $(`${div}`).css("left", offset);
-      }
-
-      $(`${next}`).click(function () {
-        console.log("this next button clicked");
-        const totalItems = $(`${div} .scroll-item`).length;
-        const itemsVisible = Math.floor(
-          $(".carousel-container").width() /
-          $(`${div} .scroll-item`).outerWidth(true)
-        );
-        if (currentIndex < totalItems - itemsVisible) {
-          currentIndex++;
-          updateCarousel();
-        }
-      });
-
-      $(`${prev}`).click(function () {
-        if (currentIndex > 0) {
-          currentIndex--;
-          updateCarousel();
-        }
-      });
-
-      $(`${div}`).draggable({
-        axis: "x",
-        stop: function (event, ui) {
-          const itemWidth = $(`${div} .scroll-item`).outerWidth(true);
-          const offset = ui.position.left;
-          currentIndex = Math.round(-offset / itemWidth);
-          const totalItems = $(`${div} .scroll-item`).length;
-          const itemsVisible = Math.floor(
-            $(".carousel-container").width() / itemWidth
-          );
-          if (currentIndex < 0) currentIndex = 0;
-          if (currentIndex > totalItems - itemsVisible)
-            currentIndex = totalItems - itemsVisible;
-          updateCarousel();
+      const carousels = [
+        {
+          container: document.getElementById('nowPlayingMovies'),
+          prevButton: document.querySelector('.prv-1'),
+          nextButton: document.querySelector('.nxt-1'),
         },
+        {
+          container: document.getElementById('opening-this-week'),
+          prevButton: document.querySelector('.prv-2'),
+          nextButton: document.querySelector('.nxt-2'),
+        },
+        {
+          container: document.getElementById('popularMovies'),
+          prevButton: document.querySelector('.prv-3'),
+          nextButton: document.querySelector('.nxt-3'),
+        }
+      ];
+
+      carousels.forEach(carousel => {
+        let currentIndex = 0;
+
+        carousel.prevButton.addEventListener('click', function() {
+          console.log('Previous button clicked');
+          if (currentIndex > 0) {
+            currentIndex--;
+            updateCarousel(carousel.container, currentIndex);
+          }
+        });
+
+        carousel.nextButton.addEventListener('click', function() {
+          console.log('Next button clicked');
+          if (currentIndex < carousel.container.children.length - 1) {
+            currentIndex++;
+            updateCarousel(carousel.container, currentIndex);
+          }
+        });
+
+        function updateCarousel(container, index) {
+          const itemWidth = container.children[0].offsetWidth;
+          container.style.left = -index * itemWidth + 'px';
+        }
       });
     }
+
+    initCarousel();
+  });
+   
   </script>
 </body>
 
