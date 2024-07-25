@@ -9,8 +9,10 @@
   <link rel="stylesheet" href="/nestHood/styling/style.css" />
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.3/font/bootstrap-icons.min.css" />
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.3/jquery-ui.min.js"></script>
   
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.3/jquery-ui.min.js"></script>
+
   <style>
     :root {
       font-size: 16px;
@@ -145,7 +147,7 @@
       </div>
     </div>
   </section>
-  
+
   <section>
     <div class="top-rated container">
       <div class="row d-flex justify-content-center align-item-center">
@@ -181,9 +183,8 @@
   <script src="/nestHood/ctrl/footer.js"></script>
   <script src="/nestHood/ctrl/carousel.js"></script>
   <script src="/nestHood/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.3/jquery-ui.min.js"></script>
   <script src="/nestHood/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.3/jquery-ui.min.js"></script>
+  
   <script>
     $(function () {
       appendContentMovie(
@@ -211,6 +212,7 @@
       }
 
       $(`${next}`).click(function () {
+        console.log("this next button cliked");
         const totalItems = $(`${div} .scroll-item`).length;
         const itemsVisible = Math.floor(
           $(".carousel-container").width() /

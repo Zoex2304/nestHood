@@ -272,7 +272,6 @@ p {
   background-repeat: no-repeat;
   left: 50% !important;
   transform: translate(-50%);
-  background-image: url("/assets/moviegrid.jpg");
   overflow: hidden;
 }
 .hero::after {
