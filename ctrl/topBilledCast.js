@@ -14,17 +14,19 @@ function getBilledCast(movie_id) {
 }
 
 function appendBilledCast(data) {
-    const photoCast = data.profile_path ? `<img src='https://image.tmdb.org/t/p/w200/${data.profile_path}' alt='${data.name}'>` : '';
-    var card = `<div id='movie-${data.id}' class='scroll-item col-lg-2 col-md-4 col-sm-4 col-4 mb-4' style='height: fit-content'>
-                        <div class='billed movie-card card h-100'>
-                            ${photoCast}
-                            <div class='card-body ps-0'>
-                                <p> ${data.name} <br>
-                                ${data.character}</p>
-                            </div>
-                        </div>
-                      
-                    </div>`;
+    const photoCast = data.profile_path ? `<img src='https://image.tmdb.org/t/p/w1280/${data.profile_path}' alt='${data.name}'>` : '';
+    const card = `
+    <div id='billed-${data.id}' class='scroll-item fit-content col-lg-2 col-sm-3 col-3 col-md-2'>
+        <div class='card movie-card'>
+            ${photoCast}
+            <div class='card-body'>
+                <p>${data.name}</p>
+                <p>${data.character}</p>
+            </div>
+        </div>
+    </div>
+    `
+    
     $("#topBilledCast").append(card);
 }
 

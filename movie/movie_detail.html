@@ -18,6 +18,7 @@
   <script src="/nestHood/ctrl/footer.js"></script>
   <script src="/nestHood/ctrl/trailer-modal.js"></script>
   <script src="/nestHood/ctrl/topBilledCast.js"></script>
+  <script src="/nestHood/ctrl/carousel.js"></script>
 </head>
 
 <body>
@@ -69,22 +70,89 @@
   </div>
   <div id="details-log-placeholder" class="mobile-padding padding-block"></div>
 
-  <div class="top-billed-cast ">
-    <div class="row d-flex justify-content-center mobile-padding">
-      <div class="col-md-9">
-        <h1>Top Billed Cast</h1><br><br>
-        <div class="row d-flex justify-content-center">
-          <div class="carousel-container">
-            <div id="topBilledCast" class="row flex-nowrap"></div>
+  <section>
+    <div class="top-billed-cast">
+      <div class="container">
+        <div class="row d-flex justify-content-center ">
+          <div class="col-lg-10">
+            <div class="header col-lg-12 padding-block d-flex align-items-center">
+              <h4>Top Billed Cast</h4>
+              <div class="ms-auto d-flex justify-content-end h-100 p-0 gap-4">
+                <button class="prv-7 carousel-button btn p-0">
+                  <i class="bi bi-arrow-left-circle text-white icon-large icon-small"></i>
+                </button>
+                <button class="nxt-7 carousel-button btn p-0">
+                  <i class="bi bi-arrow-right-circle text-white icon-large icon-small"></i>
+                </button>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="carousel-container">
+                <div id="topBilledCast" class="row flex-nowrap d-flex" style="transition: left 0.3s"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  
+  </section>
+
   <div id="footer"></div>
   <script src="/nestHood/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.3/jquery-ui.min.js"></script>
+  <script>
+
+    $(()=>{
+      initCarousel("#topBilledCast", ".prv-7", ".nxt-7")
+    })
+     function initCarousel(div, prev, next) {
+      let currentIndex = 0;
+
+      function updateCarousel() {
+        const itemWidth = $(`${div} .scroll-item`).outerWidth(true);
+        const offset = -currentIndex * itemWidth;
+        $(`${div}`).css("left", offset);
+      }
+
+      $(`${next}`).click(function () {
+        const totalItems = $(`${div} .scroll-item`).length;
+        const itemsVisible = Math.floor(
+          $(".carousel-container").width() /
+          $(`${div} .scroll-item`).outerWidth(true)
+        );
+        if (currentIndex < totalItems - itemsVisible) {
+          currentIndex++;
+          updateCarousel();
+        }
+      });
+
+      $(`${prev}`).click(function () {
+        if (currentIndex > 0) {
+          currentIndex--;
+          updateCarousel();
+        }
+      });
+
+      $(`${div}`).draggable({
+        axis: "x",
+        stop: function (event, ui) {
+          const itemWidth = $(`${div} .scroll-item`).outerWidth(true);
+          const offset = ui.position.left;
+          currentIndex = Math.round(-offset / itemWidth);
+          const totalItems = $(`${div} .scroll-item`).length;
+          const itemsVisible = Math.floor(
+            $(".carousel-container").width() / itemWidth
+          );
+          if (currentIndex < 0) currentIndex = 0;
+          if (currentIndex > totalItems - itemsVisible)
+            currentIndex = totalItems - itemsVisible;
+          updateCarousel();
+        },
+      });
+    }
+  </script>
 </body>
 
 </html>
 
+<!-- <a href="/nestHood/movie/top-rated.html" class="link-danger btn ms-1">See All</a> -->
